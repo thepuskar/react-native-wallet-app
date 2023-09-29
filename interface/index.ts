@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import {
     GestureResponderEvent,
+    ImageSourcePropType,
+    ImageStyle,
     StyleProp,
     TextStyle,
     ViewStyle,
-    ImageSourcePropType,
-    ImageStyle,
 } from 'react-native'
 
 export interface ITextProps {
@@ -30,4 +30,16 @@ export interface IProfileProps {
     imgStyle?: StyleProp<ImageStyle>
     imgContainerStyle?: StyleProp<ViewStyle>
     onPress?: ((event: GestureResponderEvent) => void) | undefined
+}
+
+export interface ICardProps {
+    id: number
+    accountNumber: string
+    balance: string
+    alias?: string
+    logo: ImageSourcePropType
+}
+
+export interface ICardSectionProps {
+    data: Array<ICardProps>
 }
