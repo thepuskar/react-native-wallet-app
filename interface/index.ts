@@ -43,3 +43,23 @@ export interface ICardProps {
 export interface ICardSectionProps {
     data: Array<ICardProps>
 }
+
+export interface ITransactionProps {
+    id: number
+    title: string
+    subtitle: string
+    amount: string
+    date: string
+    art: {
+        icon: string
+        background: string
+    }
+}
+
+export interface ITransactionSectionProps {
+    data: Array<ITransactionProps>
+}
+export interface ITransactionAvatarProps {
+    icon: any
+    background: string
+}
